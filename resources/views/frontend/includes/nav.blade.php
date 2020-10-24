@@ -1,6 +1,6 @@
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{ route('frontend.pages.index') }}" title="strona główna">
-                <img src="{{ asset('storage/img/woda_kolonska_logo.svg') }}" weight="79" height="36" alt="woda-kolonska.pl">
+            <a class="navbar-brand" href="{{ route('frontend.pages.index') }}" title="Strona główna">
+                <img src="{{ asset('storage/img/protelekom.png') }}" weight="274" height="21" alt="Protelekom">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -19,6 +19,7 @@
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.about') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.about') }}" title="o firmie">o firmie @if($currentRouteName == 'frontend.pages.about')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    {{--
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.question') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.question') }}" title="najczęściej zadawane pytania i odpowiedzi">pytania @if($currentRouteName == 'frontend.pages.question')<span class="sr-only">(current)</span>@endif</a>
                     </li>
@@ -28,6 +29,7 @@
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.term_condition') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.term_condition') }}" title="regulamin sklepu">regulamin @if($currentRouteName == 'frontend.pages.term_condition')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    --}}
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.contacts') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.contacts.create') }}" title="kontakt">kontakt @if($currentRouteName == 'frontend.pages.contacts')<span class="sr-only">(current)</span>@endif</a>
                     </li>

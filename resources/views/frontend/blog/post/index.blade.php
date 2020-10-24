@@ -1,12 +1,12 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'blog')
-@section('description', 'blog')
-@section('keywords', 'wody kolońskie, wody toaletowe, perfumy')
+@section('title', 'Blog')
+@section('description', 'Blog')
+@section('keywords', 'Telefony gsm, tablety i laptopy')
 
 @section('content')
 @if ($posts->count() > 0)
-            <div class="row mt-5 mb-3"><div class="col-sm"><h1>blog</h1></div></div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h1>Blog</h1></div></div>
             <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 @foreach ($posts as $post)
                 <div class="col mb-4">

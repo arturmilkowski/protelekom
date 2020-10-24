@@ -43,7 +43,7 @@
                     </div>
                 </div>                
 @empty
-                <h2 class="col text-center">brak produktów</h2>
+                <h2 class="col text-center">Brak produktów</h2>
 @endforelse
             </div>
             <div class="row mt-3">

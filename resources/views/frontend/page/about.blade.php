@@ -1,23 +1,21 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'o firmie')
-@section('description', 'zapachy zacząłem tworzyć w 2011 roku. po dziewięciu latach zdecydowałem się je zaprezentować w sieci.')
-@section('keywords', 'tworzenie zapachów, tworzenie perfum, rękodzieło')
+@section('title', 'O firmie')
+@section('description', 'Działamy od roku 2000. Sprzedajemy i serwisujemy telefony komórkowe, smartfony, tablety i laptopy.')
+@section('keywords', 'telefony komórkowe, smartfony, tablety, sprzedaż, skup, serwis')
+{{--
 @section('ldjson')
         @include('frontend.page.includes.ld_json_about')
 @endsection
-
+--}}
 @section('content')
-            <div class="row mt-5 mb-3"><div class="col-sm"><h1>o firmie</h1></div></div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h1>O firmie</h1></div></div>
             <div class="row">
                 <div class="col-sm">
                     <div class="card my-card">
                         <div class="card-body">
-                            <h2 class="card-title">zapachy zacząłem tworzyć w 2011 roku</h2>
+                            <h2 class="card-title">Działamy nieprzerwanie od roku 2000.</h2>
                             <p class="card-text mt-4">
-                                najpierw dla siebie i znajomych. dopiero po dziewięciu latach zdecydowałem się zaprezentować je szerzej.
-                                brakowało mi na rynku wód kolońskich i toaletowych, które są świeże, naturalne i lekkie i pozostają takie do końca.
-                                nużyły mnie zapachy syntetyczne i słodkie, stanowiące większość na półkach sklepowych.
                             </p>
                         </div>
                     </div>
@@ -25,11 +23,36 @@
                 <div class="col-sm">
                     <div class="card my-card">
                         <div class="card-body">
-                            <h2 class="card-title">prowadzę działalność nierejestrowaną</h2>
+                            <h2 class="card-title">Serwis</h2>
                             <p class="card-text mt-4">
-                                nie płacę vat, nie posiadam numeru nip.
-                                dowodem zakupu jest rachunek, domyślnie, w postaci elektronicznej, dostępny w panelu administracyjnym, który można wydrukować.
-                                rachunek papierowy lub fakturę (bez vat) drukuję na wyraźną prośbę, po zaznaczeniu odpowiedniego pola podczas składania zamówienia.
+                                Oferujemy ekspresową wymianę ekranów w smartfonach &mdash; czas oczekiwania od kilku godzin do 2 dni roboczych.
+                                <br>
+                                Specjalizujemy się w naprawach telefonów komórkowych, smartfonów i tabletów.
+                                <br>
+                                Ponadto serwisujemy też nawigacje, laptopy i inny drobny sprzęt elektroniczny.
+                                <br>
+                                Nasze kilkunastoletnie  doświadczenie  gwarantuje wysoką jakość świadczonych usług.
+                                Współpraca z doświadczonymi technikami oraz najlepszymi hurtowniami, w znacznym stopniu wpływa na skuteczność oraz koszt naprawy.
+                                <br>
+                                Staramy dotrzymywać jak najkrótszych terminów realizacji.
+                                <br>
+                                Na czas naprawy telefonów lub smartfonów oferujemy telefon zastępczy.
+                                <br>
+                                Na wszystkie wykonane przez nas naprawy udzielamy gwarancji oraz wystawiamy faktury vat.
+                                <br>
+                                Wykonujemy następujące usługi serwisowe:
+                                <ul class="list-unstyled ">
+                                    <li>– wymiana  ekranów dotykowych, wyświetlaczy</li>
+                                    <li>– naprawa telefonów komórkowych „po zalaniu” lub po uderzeniu</li>
+                                    <li>– wymiana części: gniazda ładowania, USB, czytniki kart sim, głośników, mikrofonów, buzerów, itp.</li>
+                                    <li>– wymiana obudowy w telefonie</li>
+                                    <li>– archiwizacja danych, na przykład, kopiowanie książki telefonicznej lub zdjęć</li>
+                                    <li>– usuwanie blokady sim-lock</li>
+                                    <li>– usuwanie kodów zabezpieczających, wzorów blokady ekranu</li>
+                                    <li>– zmiana oprogramowania telefonu, na przykład, bez brandu operatora, zmiana języka menu na polski</li>
+                                    <li>– naprawa programowa po nieudanej aktualizacji</li>
+                                    <li>– naprawa telefonów z błędami systemowymi</li>
+                                </ul>
                             </p>
                         </div>
                     </div>

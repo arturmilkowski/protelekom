@@ -14,10 +14,12 @@
     ]
 )
 @endsection
+
+{{--
 @section('ldjson')
         @include('frontend.blog.post.includes.ld_json')
 @endsection
-
+--}}
 @section('content')
             <article>
                 <h1 class="mt-5 mb-3">{{ $post->title }}</h1>
@@ -58,6 +60,7 @@
                     <a href="{{ route('frontend.blog.posts.index') }}" class="btn btn-light"><i class="fas fa-angle-left"></i> powrót do bloga</a>
                 </div>
             </div>
+            {{--
             @include('frontend.blog.post.includes.comment_form')
 @if (count($post->comments) > 0)
             <div class="row">
@@ -74,4 +77,5 @@
 @endforeach
             </ul>
 @endif
+            --}}
 @endsection
