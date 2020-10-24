@@ -8,9 +8,11 @@
 @section('og_image', asset(config('settings.storage.types_storage_path')) . '/' . $product->types[0]->img)
 @endif
 @endif
+{{--
 @section('ldjson')
         @include('frontend.product.includes.ld_json')
 @endsection
+--}}
 @section('content')
 @isset($basket)
             @include('frontend.includes.basket')
@@ -43,12 +45,12 @@
                     </div>
                 </div>                
 @empty
-                <h2 class="col text-center">Brak produktów</h2>
+                <h2 class="col text-center">Brak typów</h2>
 @endforelse
             </div>
             <div class="row mt-3">
                 <div class="col-sm">
-                    <a href="{{ route('frontend.product.index') }}" title="powrót do poprzedniej strony"><i class="fas fa-arrow-left"></i> powrót</a>
+                    <a href="{{ route('frontend.product.index') }}" title="powrót do poprzedniej strony"><i class="fas fa-arrow-left"></i> Powrót</a>
                 </div>
             </div>
 @endsection

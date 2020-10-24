@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        
+        /*
         DB::table('users')->insert(
             [
                 'id' => (string) Str::uuid(),
@@ -24,6 +24,7 @@ class UsersTableSeeder extends Seeder
                 'password' => bcrypt('op[]op[]'),
             ]
         );
+        */
         DB::table('users')->insert(
             [
                 'id' => (string) Str::uuid(),
