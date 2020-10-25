@@ -28,7 +28,7 @@ class StoreProduct extends FormRequest
         return [
             'brand_id' => [],
             'category_id' => ['required', 'integer'],
-            'concentration_id' => ['required', 'integer'],
+            // 'concentration_id' => ['required', 'integer'],
             'name' => ['required', 'max:255'],
             'description' => [],
             'hide' => ['sometimes', 'boolean'],

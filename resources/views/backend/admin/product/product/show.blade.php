@@ -26,10 +26,12 @@
                                 <th scope="row">kategoria</th>
                                 <td>{{ $product->category->name }}</td>
                             </tr>
+                            {{--
                             <tr>
                                 <th scope="row">rodzaj</th>
                                 <td>{{ $product->concentration->name }}</td>
                             </tr>
+                            --}}
                             <tr>
                                 <th scope="row">nazwa</th>
                                 <td>{{ $product->name }}</td>

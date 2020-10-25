@@ -24,7 +24,7 @@ class CreateController extends Controller
         Gate::authorize('admin');
 
         $sizes = Size::all();
-        dd($sizes);
+        // dd($sizes);
         $products = Product::all();
         $currentRouteName = 'backend.admins.products';
 

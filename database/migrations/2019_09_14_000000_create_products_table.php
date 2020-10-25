@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('category_id')->nullable();
-                $table->unsignedBigInteger('concentration_id')->nullable();
+                // $table->unsignedBigInteger('concentration_id')->nullable();
                 $table->string('slug', 60)->unique();
                 $table->string('name', 60)->unique();
                 $table->text('description')->nullable();
@@ -34,10 +34,11 @@ class CreateProductsTable extends Migration
                 $table->foreign('category_id')
                     ->references('id')->on('categories')
                     ->onDelete('set null');
-
+                /*
                 $table->foreign('concentration_id')
                     ->references('id')->on('concentrations')
                     ->onDelete('set null');
+                */
             }
         );
     }

@@ -28,17 +28,19 @@
                     <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $type->name }}" loading="lazy">
 @endif
                     <div class="card-body">
-                        <h2 class="card-title">{{ $type->name }} {{ $product->category->name }} {{ $product->concentration->name }}</h2>
+                        <h2 class="card-title">{{ $type->name }} {{ $product->category->name }} {{-- $product->concentration->name --}}</h2>
                         <h3 class="card-text">{{ $type->price }} zł</h3>
                         <p class="card-text"><small class="text-muted">sztuk w magazynie: {{ $type->quantity}}</small></p>
 @if ($type->description)
                         <p class="card-text"><span class="text-muted">{{ $type->description }}</span></p>
 @endif
 @if ($type->quantity > 0)
+                        {{--
                         <form action="{{ route('frontend.basket.store', [$type->id]) }}" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-outline-primary">do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>
                         </form>
+                        --}}
 @else
                         <div class="alert alert-danger" role="alert">brak w magazynie</div>
 @endif
