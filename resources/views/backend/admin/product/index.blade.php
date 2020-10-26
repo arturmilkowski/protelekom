@@ -12,9 +12,11 @@
                 <div class="col-sm">
                     <a href="{{ route('backend.admins.products.categories.index') }}" title="">kategorie</a>
                 </div>
+                {{--
                 <div class="col-sm">
                     <a href="{{ route('backend.admins.products.concentrations.index') }}" title="">rodzaje</a>
                 </div>
+                --}}
                 <div class="col-sm">
                     <a href="{{ route('backend.admins.products.index') }}" title="">produkty</a>
                 </div>

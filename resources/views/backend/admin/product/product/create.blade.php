@@ -14,7 +14,6 @@
                         <div class="form-group">
                             <label for="brand_id">producent</label>
                             <select class="form-control @error('brand_id')is-invalid @enderror" id="brand_id" name="brand_id">
-                                <option value="">nie wypełniaj</option>
 @foreach ($brands as $brand)
 @if ( old('brand_id') == $brand->id)
                                 <option value="{{ $brand->id }}" selected>{{ $brand->name }}</option>
@@ -41,7 +40,7 @@
                             @error('category_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        {{--
                         <div class="form-group">
                             <label for="concentration_id">rodzaj</label>
                             <select class="form-control @error('concentration_id')is-invalid @enderror" id="category_id" name="concentration_id" required>
@@ -56,7 +55,7 @@
                             @error('concentration_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        --}}
                         <div class="form-group">
                             <label for="name">nazwa</label>
                             <input class="form-control @error('name')is-invalid @enderror" type="text" id="name" name="name" value="{{ old('name') }}" maxlength="40" placeholder="pole obowiązkowe" required>

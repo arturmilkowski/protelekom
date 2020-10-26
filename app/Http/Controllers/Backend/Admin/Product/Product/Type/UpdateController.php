@@ -35,7 +35,6 @@ class UpdateController extends Controller
         $hide = $request->input('hide', '0');
         $validated = $request->validated();
         $validated['hide'] = $hide;
-
         $message = config('settings.ui.backend.messages.not_changed');
         $alert = config('settings.ui.backend.alerts.warning');
 

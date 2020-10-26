@@ -50,7 +50,7 @@
                             </tr>
 @empty
                             <tr>                                
-                                <td class="table-warning" colspan="6">brak produktów</td>
+                                <td class="table-warning" colspan="7">Brak produktów</td>
                             </tr>
 @endforelse
                         </tbody>

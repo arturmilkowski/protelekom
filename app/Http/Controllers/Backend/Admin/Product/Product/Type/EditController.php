@@ -7,7 +7,8 @@ namespace App\Http\Controllers\Backend\Admin\Product\Product\Type;
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Gate;
-use App\Models\{Category, Concentration, Product, Type};
+use App\Models\{Product, Type};
+use App\Models\Product\{Condition, Size};
 
 class EditController extends Controller
 {
@@ -23,12 +24,13 @@ class EditController extends Controller
         Gate::authorize('admin');
 
         $products = Product::all();
-        
+        $conditions = Condition::all();        
+        $sizes = Size::all();
         $currentRouteName = 'backend.admins.products';
         
         return view(
             'backend.admin.product.product.type.edit',
-            compact('products', 'product', 'type', 'currentRouteName')
+            compact('products', 'product', 'type', 'conditions', 'sizes', 'currentRouteName')
         );
     }
 }

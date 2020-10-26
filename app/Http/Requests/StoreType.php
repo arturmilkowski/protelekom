@@ -28,6 +28,8 @@ class StoreType extends FormRequest
         return [
             'product_id' => ['required', 'integer'],
             // 'slug' => ['required', 'string', 'max:255'],
+            'condition_id' => ['required', 'numeric', 'min:1', 'max:99'],
+            'size_id' => ['required', 'numeric', 'min:1', 'max:6'],
             'name' => ['required', 'string', 'max:255'],
             'price' => ['required', 'numeric', 'min:1', 'max:9999.99'],
             'promo_price' => ['sometimes', 'numeric', 'min:0.00', 'max:9999.99'],

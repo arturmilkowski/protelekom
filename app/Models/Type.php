@@ -20,8 +20,8 @@ class Type extends Model
      */
     protected $fillable = [
         'product_id',
+        'condition_id',
         'size_id',
-        // 'slug',
         'name',
         'price',
         'promo_price',
@@ -39,6 +39,16 @@ class Type extends Model
     public function product(): BelongsTo
     {
         return $this->belongsTo('App\Models\Product');
+    }
+
+    /**
+     * Get the condition of the type.
+     * 
+     * @return BelongsTo
+     */
+    public function condition(): BelongsTo
+    {
+        return $this->belongsTo('App\Models\Product\Condition');
     }
 
     /**

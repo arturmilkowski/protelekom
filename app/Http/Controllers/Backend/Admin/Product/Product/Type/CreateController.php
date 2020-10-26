@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Product;
-use App\Models\Product\Size;
+use App\Models\Product\{Condition, Size};
 
 class CreateController extends Controller
 {
@@ -23,14 +23,14 @@ class CreateController extends Controller
     {
         Gate::authorize('admin');
 
-        $sizes = Size::all();
-        // dd($sizes);
         $products = Product::all();
+        $conditions = Condition::all();
+        $sizes = Size::all();        
         $currentRouteName = 'backend.admins.products';
 
         return view(
             'backend.admin.product.product.type.create',
-            compact('sizes', 'product', 'products', 'currentRouteName')
+            compact('product', 'products', 'conditions', 'sizes', 'currentRouteName')
         );
     }
 }

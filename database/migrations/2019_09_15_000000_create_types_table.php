@@ -20,6 +20,7 @@ class CreateTypesTable extends Migration
             function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('product_id')->nullable();
+                $table->unsignedBigInteger('condition_id')->nullable()->default(1);
                 $table->unsignedBigInteger('size_id')->nullable()->default(2);
                 $table->string('slug', 40)->index();
                 $table->string('name', 40)->index();
@@ -35,6 +36,10 @@ class CreateTypesTable extends Migration
 
                 $table->foreign('product_id')
                     ->references('id')->on('products')
+                    ->onDelete('set null');
+
+                $table->foreign('condition_id')
+                    ->references('id')->on('conditions')
                     ->onDelete('set null');
 
                 $table->foreign('size_id')

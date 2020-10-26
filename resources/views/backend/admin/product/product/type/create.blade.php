@@ -27,6 +27,21 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="size_id">stan</label>
+                            <select class="form-control @error('condition_id')is-invalid @enderror" id="condition_id" name="condition_id" required>
+@foreach ($conditions as $condition_)
+@if ( $condition_->id == old('condition_id')))
+                                <option value="{{ $condition_->id }}" selected>{{ $condition_->display_name }}</option>
+@else
+                                <option value="{{ $condition_->id }}">{{ $condition_->display_name }}</option>
+@endif
+@endforeach
+                            </select>
+                            @error('condition_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
+
+                        </div>
+
+                        <div class="form-group">
                             <label for="size_id">rozmiar</label>
                             <select class="form-control @error('size_id')is-invalid @enderror" id="size_id" name="size_id" required>
 @foreach ($sizes as $size_)
@@ -63,14 +78,14 @@
                             @error('price')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        {{--
                         <div class="form-group">
                             <label for="promo_price">cena promocyjna [zł]</label>
-                            <input class="form-control @error('promo_price')is-invalid @enderror" type="text" id="promo_price" name="promo_price" value="@if(old('promo_price') != null){{ old('promo_price') }} @else 0.00 @endif" min="0" max="9999.99" {{-- step="1" --}} placeholder="pole obowiązkowe. ta cena musi być mniejsza niż zwykła, ale nie mniejsza od zera" required>
+                            <input class="form-control @error('promo_price')is-invalid @enderror" type="text" id="promo_price" name="promo_price" value="@if(old('promo_price') != null){{ old('promo_price') }} @else 0.00 @endif" min="0" max="9999.99" placeholder="pole obowiązkowe. ta cena musi być mniejsza niż zwykła, ale nie mniejsza od zera" required>
                             @error('promo_price')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        --}}
                         <div class="form-group">
                             <label for="quantity">ilość [szt.]</label>
                             <input class="form-control @error('quantity')is-invalid @enderror" type="number" id="quantity" name="quantity" value="{{ old('quantity') }}" min="0" max="255" step="1" placeholder="pole obowiązkowe" required>

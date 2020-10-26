@@ -26,10 +26,12 @@
                                 <th scope="row">cena</th>
                                 <td>{{ $type->price }} zł</td>
                             </tr>
+                            {{--
                             <tr>
                                 <th scope="row">cena promocyjna</th>
                                 <td>{{ $type->promo_price }} zł</td>
                             </tr>
+                            --}}
                             <tr>
                                 <th scope="row">ilość </th>
                                 <td>{{ $type->quantity }} szt</td>

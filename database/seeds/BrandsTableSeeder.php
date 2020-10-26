@@ -13,10 +13,17 @@ class BrandsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        /*
         DB::table('brands')->insert(
-            ['slug' => 'wokol-lawendy', 'name' => 'wokół lawendy']
+            ['slug' => 'apple', 'name' => 'Apple'],
         );
-        */
+        DB::table('brands')->insert(
+            ['slug' => 'huawei', 'name' => 'Huawei'],
+        );
+        DB::table('brands')->insert(
+            ['slug' => 'samsung', 'name' => 'Samsung'],
+        );
+        DB::table('brands')->insert(
+            ['slug' => 'sony', 'name' => 'Sony'],
+        );
     }
 }

@@ -6,6 +6,11 @@
             @component('backend.components.header')
                 edycja typu (rodzaju) produktu
             @endcomponent
+            
+            
+@foreach ($errors->all() as $error)
+                <div>{{ $error }}</div>
+@endforeach
             <div class="row">
                 <div class="col-sm">
                     <form action="{{ route('backend.admins.products.types.update', [$product->id, $type->id]) }}" method="POST" enctype="multipart/form-data">
@@ -16,7 +21,7 @@
                             <label for="product_id">produkt</label>
                             <select class="form-control @error('product_id')is-invalid @enderror" id="product_id" name="product_id" required>
 @foreach ($products as $p)
-@if ( $p->id == $type->product_id)
+@if ($p->id == $type->product_id)
                                 <option value="{{ $p->id }}" selected>{{ $p->name }}</option>
 @else
                                 <option value="{{ $p->id }}">{{ $p->name }}</option>
@@ -24,6 +29,36 @@
 @endforeach
                             </select>
                             @error('product_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="condition_id">stan</label>
+                            <select class="form-control @error('condition_id')is-invalid @enderror" id="condition_id" name="condition_id" required>
+@foreach ($conditions as $condition_)
+@if ($condition_->id == $type->condition_id)
+                                <option value="{{ $condition_->id }}" selected>{{ $condition_->display_name }}</option>
+@else
+                                <option value="{{ $condition_->id }}">{{ $condition_->display_name }}</option>
+@endif
+@endforeach
+                            </select>
+                            @error('condition_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="size_id">rozmiar</label>
+                            <select class="form-control @error('size_id')is-invalid @enderror" id="size_id" name="size_id" required>
+@foreach ($sizes as $size_)
+@if ($size_->id == $type->size_id)
+                                <option value="{{ $size_->id }}" selected>{{ $size_->name }}</option>
+@else
+                                <option value="{{ $size_->id }}">{{ $size_->name }}</option>
+@endif
+@endforeach
+                            </select>
+                            @error('size_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
 
@@ -49,14 +84,14 @@
                             @error('price')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        {{--
                         <div class="form-group">
                             <label for="promo_price">cena promocyjna [zł]</label>
-                            <input class="form-control @error('promo_price')is-invalid @enderror" type="text" id="promo_price" name="promo_price" value="{{ $type->promo_price }}" min="0.00" max="9999.99" {{-- step="1" --}} placeholder="pole obowiązkowe" required>
+                            <input class="form-control @error('promo_price')is-invalid @enderror" type="text" id="promo_price" name="promo_price" value="{{ $type->promo_price }}" min="0.00" max="9999.99" placeholder="pole obowiązkowe" required>
                             @error('promo_price')<div class="invalid-feedback">{{ $message }}</div>@enderror
 
                         </div>
-
+                        --}}
                         <div class="form-group">
                             <label for="quantity">ilość [szt.]</label>
                             <input class="form-control @error('quantity')is-invalid @enderror" type="number" id="quantity" name="quantity" value="{{ $type->quantity }}" min="0" max="255" step="1" placeholder="pole obowiązkowe" required>
