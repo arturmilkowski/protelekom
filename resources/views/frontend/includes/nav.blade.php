@@ -1,6 +1,6 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="{{ route('frontend.pages.index') }}" title="Strona główna">
-                <img src="{{ asset('storage/img/protelekom.png') }}" weight="274" height="21" alt="Protelekom">
+                <img src="{{ asset('storage/img/protelekom.png') }}" weight="240" height="18" alt="Protelekom">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -13,9 +13,11 @@
                     <li class="nav-item @if($currentRouteName == 'frontend.product') active @endif">
                         <a class="nav-link" href="{{ route('frontend.product.index') }}" title="produkty">produkty @if($currentRouteName == 'frontend.product')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    {{--
                     <li class="nav-item @if($currentRouteName == 'frontend.blog') active @endif">
                         <a class="nav-link" href="{{ route('frontend.blog.posts.index') }}" title="blog">blog @if($currentRouteName == 'frontend.blog')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    --}}
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.about') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.about') }}" title="o firmie">o firmie @if($currentRouteName == 'frontend.pages.about')<span class="sr-only">(current)</span>@endif</a>
                     </li>
