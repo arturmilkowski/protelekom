@@ -6,16 +6,16 @@ namespace App\Http\Controllers\Frontend\Page;
 
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
-use Illuminate\Support\Facades\Cache;
+// use Illuminate\Support\Facades\Cache;
 use App\Models\Product;
 use App\Models\Blog\Post;
 use App\Services\Basket;
-use Illuminate\Support\Facades\Redis;
-use Illuminate\Contracts\Cache\Repository;
+// use Illuminate\Support\Facades\Redis;
+// use Illuminate\Contracts\Cache\Repository;
 
 class Index extends Controller
 {
-    const SECONDS = 60 * 60 * 12;  // 12 = 12 hours. 168 = one week
+    // const SECONDS = 60 * 60 * 12;  // 12 = 12 hours. 168 = one week
 
     /**
      * Index frontend page.
@@ -26,24 +26,9 @@ class Index extends Controller
      */
     public function __invoke(Basket $basket): View
     {
-        $posts = Cache::remember(
-            'latest_posts',
-            self::SECONDS,
-            function () {
-                return Post::published()
-                    ->latest()
-                    ->take(4)
-                    ->get();
-            }
-        );
-        $products = Cache::remember(
-            'latest_products',
-            self::SECONDS,
-            function () {
-                return Product::with(['concentration', 'category'])->latest()->get();
-            }
-        );
-        $currentRouteName = 'frontend.pages.index';
+        $posts = Post::published()->latest()->take(4)->get();
+        $products = Product::with(['brand', 'category'])->latest()->get();
+        $currentRouteName = 'frontend.pages.index';        
 
         return view(
             'frontend.page.index',

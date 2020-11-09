@@ -14,7 +14,7 @@
             <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
 @foreach ($products as $product)
                 <div class="col">
-                <div class="card border-light">
+                <div class="card">
 @if ($product->img)
                     <a href="{{ route('frontend.product.show', $product) }}" title="{{ $product->name }}">
                         <img src="{{ asset(config('settings.storage.products_storage_path')) . '/' . $product->img }}" class="card-img-top" alt="{{ $product->name }}">

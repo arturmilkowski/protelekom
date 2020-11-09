@@ -23,7 +23,7 @@
             </div>
             <div class="card-deck">
 @forelse ($product->types as $type)
-                <div class="card border-light">
+                <div class="card">
 @if ($type->img)
                     <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $type->name }}" loading="lazy">
 @endif
