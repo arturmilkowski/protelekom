@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'kontakt')
+@section('title', 'Kontakt')
 @section('description', 'Masz pytania? Skontaktuj się z nami.')
 @section('keywords', '')
 {{--

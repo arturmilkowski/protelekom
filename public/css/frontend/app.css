@@ -10903,3 +10903,17 @@ a.text-dark:focus {
   }
 }
 
+/*
+.bg-light {
+    background-color: #F8F8FF !important;
+}
+*/
+
+.navbar-brand {
+  margin-right: 3rem;
+}
+
+a.navbar-brand:hover {
+  background-color: #F9A61A;
+}
+
