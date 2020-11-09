@@ -13,8 +13,9 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('categories')->insert(['slug' => 'smartfon', 'name' => 'Smartfon']);
-        DB::table('categories')->insert(['slug' => 'telefon', 'name' => 'Telefon']);
-        DB::table('categories')->insert(['slug' => 'tablet', 'name' => 'Tablet']);
+        DB::table('categories')
+            ->insert(['slug' => 'smartfon', 'name' => 'Smartfon']);
+        DB::table('categories')
+            ->insert(['slug' => 'telefon', 'name' => 'Telefon']);
     }
 }

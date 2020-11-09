@@ -20,15 +20,34 @@ class ProfilesTableSeeder extends Seeder
                     [
                         'id' => (string) Str::uuid(),
                         'role_id' => 1,
-                        'name' => 'artur',
+                        'name' => 'Grzegorz',
+                        'email' => 'poczta@protelekom.pl',
+                        'password' => bcrypt('Grze7890'),
+                    ]
+                ),
+                'lastname' => 'Romański',
+                'street' => 'Ulica',
+                'zip_code' => '32-600',
+                'city' => 'Oświęcim',
+                'voivodeship_id' => 4,
+                'phone' => '123456789',
+            ]
+        );
+        factory(App\Models\Profile::class)->create(
+            [
+                'user_id' => factory(App\User::class)->create(
+                    [
+                        'id' => (string) Str::uuid(),
+                        'role_id' => 1,
+                        'name' => 'Artur',
                         'email' => 'artur-milkowski@tlen.pl',
                         'password' => bcrypt('op[]op[]'),
                     ]
                 ),
-                'lastname' => 'miłkowski',
-                'street' => 'armii krajowej 6C/17',
+                'lastname' => 'Miłkowski',
+                'street' => 'Armii Krajowej 6C/17',
                 'zip_code' => '67-100',
-                'city' => 'nowa sól',
+                'city' => 'Nowa Sól',
                 'voivodeship_id' => 4,
                 'phone' => '505891315',
             ]
