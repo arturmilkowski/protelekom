@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Backend\Admin\Product\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Gate;
-use App\Models\{Category, Concentration, Product};
+use App\Models\{Category, Product};  // Concentration
 use App\Models\Product\Brand;
 
 class EditController extends Controller
@@ -25,7 +25,7 @@ class EditController extends Controller
 
         $brands = Brand::all();
         $categories = Category::all();
-        $concentrations = Concentration::all();
+        // $concentrations = Concentration::all();
         $currentRouteName = 'backend.admins.products';
         
         return view(
@@ -33,7 +33,7 @@ class EditController extends Controller
             compact(
                 'brands',
                 'categories',
-                'concentrations',
+                // 'concentrations',
                 'product',
                 'currentRouteName'
             )
