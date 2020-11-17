@@ -87,6 +87,12 @@ Route::namespace('Frontend')->name('frontend.')->group(
             function () {
                 Route::get('/produkty', 'Index')->name('index');
                 Route::get('/produkty/{product:slug}', 'Show')->name('show');
+
+                Route::namespace('Type')->name('type.')->group(
+                    function () {
+                        Route::get('/produkty/{brand:slug}/{product:slug}/{type:slug}', 'Show')->name('show');
+                    }
+                );
             }
         );
     }
