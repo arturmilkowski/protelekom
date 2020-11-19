@@ -85,14 +85,49 @@ Route::namespace('Frontend')->name('frontend.')->group(
 
         Route::namespace('Product')->name('product.')->group(
             function () {
-                Route::get('/produkty', 'Index')->name('index');
-                Route::get('/produkty/{product:slug}', 'Show')->name('show');
-
+                /*
                 Route::namespace('Type')->name('type.')->group(
                     function () {
                         Route::get('/produkty/{brand:slug}/{product:slug}/{type:slug}', 'Show')->name('show');
                     }
                 );
+                */
+                Route::namespace('Category')->name('category.')->group(
+                    function () {
+                        // Route::get('/produkty/kategorie', 'Index')->name('index');  // 
+                        Route::get('/produkty/{category:slug}', 'Show')->name('show');
+                        
+                        Route::namespace('Product')->name('product.')->group(
+                            function () {
+                                Route::get('/produkty/{category:slug}/{product:slug}', 'Index')->name('index');
+
+                                Route::namespace('Type')->name('type.')->group(
+                                    function () {
+                                        Route::get('/produkty/{category:slug}/{product:slug}/{type:slug}', 'Show')->name('show');
+                                    }
+                                );
+                            }
+                        );
+                        /*
+                        Route::namespace('Type')->name('type.')->group(  //
+                            function () {
+                                Route::get('/produkty/{category:slug}/{product:slug}', 'Index')->name('index');
+                            }
+                        );
+                        */
+                        /*
+                        Route::namespace('Brand')->name('brand.')->group(  //
+                            function () {
+                                Route::get('/produkty/kategorie/{category}/{brand}', 'Index')->name('index');
+                                // Route::get('/produkty/kategorie/{category:slug}', 'Show')->name('show');
+                            }
+                        );
+                        */
+                    }
+                );
+                
+                Route::get('/produkty', 'Index')->name('index');
+                Route::get('/produkty/{product:slug}', 'Show')->name('show');
             }
         );
     }

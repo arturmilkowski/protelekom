@@ -38,10 +38,12 @@ class Category extends Model
      * 
      * @return HasMany
      */
+    /*
     public function concentrations(): HasMany
     {
         return $this->hasMany('App\Models\Concentration');
     }
+    */
     
     /**
      * Get the products for the category.

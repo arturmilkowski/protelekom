@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'Produkty')
-@section('description', 'Produkty')
-@section('keywords', 'telefony komórkowe, smartfony, tablety, alkomaty')
+@section('title', 'Kategorie produktów')
+@section('description', 'Kategorie produktów')
+@section('keywords', 'telefony komórkowe, smartfony, tablety, sprzedaż, skup, serwis')
 
 @section('content')
             <div class="row mt-5 mb-3"><div class="col-sm"><h1>Kategorie</h1></div></div>

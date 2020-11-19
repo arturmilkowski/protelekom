@@ -1,6 +1,6 @@
             <ul class="list-inline text-center mt-5">
                 <li class="list-inline-item">
-                    <a href="{{ config('settings.facebook') }}" title="facebook"><i class="fab fa-facebook-f"></i> polub nas na facebooku</a>
+                    <a href="{{ config('settings.facebook') }}" title="facebook"><i class="fab fa-facebook-f"></i> Polub nas na Facebooku</a>
                 </li>
                 {{--
                 <li class="list-inline-item">

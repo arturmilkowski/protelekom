@@ -57,10 +57,12 @@ class Product extends Model
      * 
      * @return BelongsTo
      */
+    /*
     public function concentration(): BelongsTo
     {
         return $this->belongsTo('App\Models\Concentration');
     }
+    */
 
     /**
      * Get the types for the product.

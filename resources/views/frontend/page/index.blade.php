@@ -32,7 +32,7 @@
 
 @if ($types->count() > 0)
             <div class="row mt-5 mb-3"><h5 class="h1 col-sm"><a href="{{ route('frontend.product.index') }}" title="Produkty">Produkty</a></h5></div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 .col-xl-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 @foreach ($types as $type)
                 <div class="col mb-4">
                     <div class="card h-100">
@@ -45,8 +45,13 @@
                             <p class="card-text">@if ($type->quantity > 0) <span class="badge badge-success">Dostępny</span> @else <span class="badge badge-danger">Niedostępny</span> @endif</p>
                             <p class="card-text">
                                 <span class="text-muted">
+                                    {{--
                                     <a href="{{ route('frontend.product.type.show', [$type->product->brand, $type->product, $type]) }}" title="{{ $type->product->name }}">
-                                        pokaż <i class="fas fa-angle-right"></i>
+                                        Pokaż <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    --}}
+                                    <a href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}" title="{{ $type->product->name }}">
+                                        Pokaż <i class="fas fa-angle-right"></i>
                                     </a>
                                 </span>
                             </p>
