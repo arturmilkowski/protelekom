@@ -41,9 +41,8 @@
 @endif
                         <div class="card-body">
                             <h2 class="card-title">{{ $type->product->brand->name }} <small>{{ $type->product->name }}</small> <small class="text-muted">{{ $type->name }}</small></h2>
-                            <p class="card-text">--</p>
                             <h3 class="card-text">Cena: {{ $type->price }} zł</h3>
-                            <p class="card-text"><small class="text-muted">sztuk w magazynie: {{ $type->quantity}}</small></p>
+                            <p class="card-text">@if ($type->quantity > 0) <span class="badge badge-success">Dostępny</span> @else <span class="badge badge-danger">Niedostępny</span> @endif</p>
                             <p class="card-text">
                                 <span class="text-muted">
                                     <a href="{{ route('frontend.product.type.show', [$type->product->brand, $type->product, $type]) }}" title="{{ $type->product->name }}">

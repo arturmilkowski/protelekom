@@ -2,22 +2,45 @@
 @section('title', $brand->name . ' ' . $product->name)
 
 @section('content')
-            <div class="card mt-5 mb-3" style="width: 675px;">
-@if ($type->img)
-                <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $brand->name }} {{ $product->name }} {{ $type->name }}">
-@endif
-                <div class="card-body">
-                    <h1 class="card-title">{{ $brand->name }} {{ $product->name }}</h1>
-                    <h3 class="card-subtitle mb-5 text-muted">{{ $type->name }}</h3>
-                    <p class="card-text mb-1">{{ $product->category->name }}</p>
-                    <h3 class="card-text">{{ $type->price }} zł</h3>
-                    <p class="card-text">Stan: {{ $type->condition->name }}</p>
-                    <p class="card-text"><small class="text-muted">sztuk w magazynie: {{ $type->quantity }}</small></p>
-@if ($type->description)
-                    <p class="card-text"><span class="text-muted">{{ $type->description }}</span></p>
-@endif
-                    <a href="{{ route('frontend.pages.index') }}" class="card-link" title="Strona główna">Strona główna</a>
-                    <a href="{{ route('frontend.product.index') }}" class="card-link" title="Produkty">Produkty</a>
+            <div class="row mt-5 mb-3">
+                <div class="col-sm">
+                    <h1>{{ $brand->name }} {{ $product->name }} <small class="text-muted">{{ $type->name }}</small></h1>
                 </div>
+            </div>
+@if ($type->img)
+            <div class="col-sm">
+                <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="" alt="{{ $brand->name }} {{ $product->name }} {{ $type->name }}">
+            </div>
+@endif
+            <div class="col-sm mt-5">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Kategoria:</th>
+                            <td>{{ $product->category->name }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stan:</th>
+                            <td>{{ $type->condition->display_name }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dostępność</th>
+                            <td>@if ($type->quantity > 0) <span class="badge badge-success">Dostępny</span> @else <span class="badge badge-danger">Niedostępny</span> @endif</td>
+                        </tr>
+@if ($type->description)
+                        <tr>
+                            <th scope="row">Opis:</th>
+                            <td><span class="text-muted">{{ $type->description }}</span></td>
+                        </tr>
+@endif
+                        <tr>
+                            <th scope="row">Cena:</th>
+                            <td><strong>{{ $type->price }}<strong> zł</td>
+                        </tr>
+                </table>
+            </div>
+            <div class="col-sm">
+                <a href="{{ route('frontend.pages.index') }}" class="card-link" title="Strona główna"><i class="fas fa-home"></i> Strona główna</a>
+                <a href="{{ route('frontend.product.index') }}" class="card-link" title="Produkty">Produkty</a>
             </div>
 @endsection
