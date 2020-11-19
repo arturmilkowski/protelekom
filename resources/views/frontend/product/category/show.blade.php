@@ -12,7 +12,7 @@
                                 <div class="card">                    
                                     <div class="card-body">
                                         <h2 class="card-title"><a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="{{ $product->name }}">{{ $product->name }}</a></h2>
-                                        <a href="#" class="card-link" title="{{ $product->brand->name }} {{ $product->name }}">Pokaż <i class="fas fa-angle-right"></i></a>
+                                        <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" class="card-link" title="{{ $product->brand->name }} {{ $product->name }}">Pokaż <i class="fas fa-angle-right"></i></a>
                                     </div>
                                 </div>
                             </div>                
