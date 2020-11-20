@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Frontend\Page;
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 
-class About extends Controller
+class Service extends Controller
 {
     /**
      * About front page.
@@ -16,8 +16,8 @@ class About extends Controller
      */
     public function __invoke(): View
     {
-        $currentRouteName = 'frontend.pages.about';
+        $currentRouteName = 'frontend.pages.service';
 
-        return view('frontend.page.about', compact('currentRouteName'));
+        return view('frontend.page.service', compact('currentRouteName'));
     }
 }

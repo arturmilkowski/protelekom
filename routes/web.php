@@ -7,7 +7,7 @@ Route::namespace('Frontend')->name('frontend.')->group(
         Route::namespace('Page')->name('pages.')->group(
             function () {
                 Route::get('/', 'Index')->name('index');
-                Route::get('/o-firmie', 'About')->name('about');
+                Route::get('/serwis', 'Service')->name('service');
                 Route::get('/pytania-i-odpowiedzi', 'Question')->name('question');
                 Route::get('/dostawa', 'Delivery')->name('delivery');
                 Route::get('/regulamin', 'TermCondition')->name('term_condition');

@@ -18,8 +18,8 @@
                         <a class="nav-link" href="{{ route('frontend.blog.posts.index') }}" title="blog">blog @if($currentRouteName == 'frontend.blog')<span class="sr-only">(current)</span>@endif</a>
                     </li>
                     --}}
-                    <li class="nav-item @if($currentRouteName == 'frontend.pages.about') active @endif">
-                        <a class="nav-link" href="{{ route('frontend.pages.about') }}" title="O firmie">O firmie @if($currentRouteName == 'frontend.pages.about')<span class="sr-only">(current)</span>@endif</a>
+                    <li class="nav-item @if($currentRouteName == 'frontend.pages.service') active @endif">
+                        <a class="nav-link" href="{{ route('frontend.pages.service') }}" title="Serwis">Serwis @if($currentRouteName == 'frontend.pages.service')<span class="sr-only">(current)</span>@endif</a>
                     </li>
                     {{--
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.question') active @endif">

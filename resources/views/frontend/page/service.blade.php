@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title', 'O firmie')
+@section('title', 'Serwis')
 @section('description', 'Działamy od roku 2000. Sprzedajemy i serwisujemy telefony komórkowe, smartfony, tablety i laptopy.')
 @section('keywords', 'telefony komórkowe, smartfony, tablety, sprzedaż, skup, serwis')
 {{--
@@ -9,7 +9,7 @@
 @endsection
 --}}
 @section('content')
-            <div class="row mt-5 mb-3"><div class="col-sm"><h1>O firmie</h1></div></div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h1>Serwis</h1></div></div>
             <div class="row">
                 <div class="col-sm">
                     <div class="card my-card">
