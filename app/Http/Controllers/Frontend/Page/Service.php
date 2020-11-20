@@ -10,7 +10,7 @@ use Illuminate\View\View;
 class Service extends Controller
 {
     /**
-     * About front page.
+     * Service front page.
      *
      * @return View
      */

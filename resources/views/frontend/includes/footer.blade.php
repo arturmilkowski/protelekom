@@ -11,11 +11,11 @@
                         &mdash;&mdash;
                         {{ config('settings.company_name') }}
                         &mdash;&mdash;
-                        <a href="{{ route('frontend.pages.cookie') }}" title="informacje o plikach cookie">informacje o ciastkach</a>
+                        <a href="{{ route('frontend.pages.cookie') }}" title="Pliki cookie">Informacje o ciastkach</a>
                         &mdash;&mdash;
-                        <a href="{{ route('frontend.pages.privacy_policy') }}" title="polityka prywatności">polityka prywatności</a>
+                        <a href="{{ route('frontend.pages.privacy_policy') }}" title="Polityka prywatności">Polityka prywatności</a>
                         &mdash;&mdash;
-                        <a href="{{ route('frontend.pages.rodo') }}" title="prawa przysługujące z tytułu rodo">rodo</a>
+                        <a href="{{ route('frontend.pages.rodo') }}" title="Prawa przysługujące z tytułu rodo">RODO</a>
 @endif
                 </div>
             </footer>

@@ -5,7 +5,7 @@
 @section('keywords', 'woda kolońska, perfumy, zapachy, perfumeria, perfumeria niszowa')
 
 @section('content')
-            <div class="row mt-5 mb-3"><div class="col-sm"><h1>regulamin sklepu</h1></div></div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h1>Regulamin Sklepu</h1></div></div>
 
             <div class="row mt-3">
                 <div class="col-sm-4"><h3>Zawarcie umowy kupna</h3></div>
