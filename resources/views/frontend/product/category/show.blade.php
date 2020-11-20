@@ -8,16 +8,31 @@
             <div class="row mt-5 mb-3"><div class="col-sm"><h1>{{ $category->name }}</h1></div></div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 @forelse ($products as $product)
-                            <div class="col mb-4">
-                                <div class="card">                    
-                                    <div class="card-body">
-                                        <h2 class="card-title"><a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="{{ $product->name }}">{{ $product->name }}</a></h2>
-                                        <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" class="card-link" title="{{ $product->brand->name }} {{ $product->name }}">Pokaż <i class="fas fa-angle-right"></i></a>
-                                    </div>
+                <div class="col">
+                    <div class="card mb-4">
+                        <div class="row no-gutters">
+@if ($product->img)
+                            <div class="col-md-4">
+                                <img src="{{ asset('storage') . '/' . 'img/products' . '/' . $product->img }}" class="card-img" alt="{{ $product->brand->name }} {{ $product->name }}">
+                            </div>
+@endif
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">
+                                        <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="">
+                                            {{ $product->name }}
+                                        </a>
+                                    </h2>
+                                    <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" class="btn btn-primary" title="{{ $product->brand->name }} {{ $product->name }}">
+                                        Pokaż
+                                    </a>
                                 </div>
-                            </div>                
+                            </div>
+                        </div>
+                    </div>
+                </div>
 @empty
-                            <p>Brak produktów</p>
+                <h2 class="col text-center">Brak produktów</h2>
 @endforelse
             </div>
 @endsection

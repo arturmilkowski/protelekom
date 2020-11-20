@@ -50,8 +50,12 @@
                                         Pokaż <i class="fas fa-angle-right"></i>
                                     </a>
                                     --}}
-                                    <a href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}" title="{{ $type->product->name }}">
-                                        Pokaż <i class="fas fa-angle-right"></i>
+
+                                    <a class="btn btn-primary"
+                                        href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}"
+                                        role="button" title="{{ $type->product->brand->name }} {{ $type->product->name }} {{ $type->name }}">
+                                        Pokaż 
+                                        <i class="fas fa-angle-right"></i>
                                     </a>
                                 </span>
                             </p>

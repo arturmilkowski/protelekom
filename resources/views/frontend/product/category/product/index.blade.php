@@ -18,11 +18,9 @@
                             <h3 class="card-text">Cena: {{ $type->price }} zł</h3>
                             <p class="card-text">@if ($type->quantity > 0) <span class="badge badge-success">Dostępny</span> @else <span class="badge badge-danger">Niedostępny</span> @endif</p>
                             <p class="card-text">
-                                <span class="text-muted">
-                                    <a href="{{ route('frontend.product.category.product.type.show', [$category, $product, $type]) }}" title="{{ $type->product->name }}">
-                                        Pokaż <i class="fas fa-angle-right"></i>
-                                    </a>
-                                </span>
+                                <a href="{{ route('frontend.product.category.product.type.show', [$category, $product, $type]) }}" class="btn btn-primary" title="{{ $type->product->name }}">
+                                    Pokaż <i class="fas fa-angle-right"></i>
+                                </a>
                             </p>
                         </div>
                     </div>
