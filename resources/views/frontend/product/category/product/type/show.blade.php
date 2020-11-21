@@ -51,6 +51,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('frontend.product.index') }}" title="Produkty"><i class="fas fa-arrow-up"></i> Produkty</a>
                         </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('frontend.product.category.product.index', [$category, $product, $type]) }}" title=""><i class="fas fa-arrow-left"></i> Powrót do modelu {{ $product->name }}</a>
+                        </li>
                     </ul>
                 </div>
             </div>

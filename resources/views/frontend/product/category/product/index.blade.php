@@ -27,4 +27,16 @@
                 </div>
 @endforeach
             </div>
+            <div class="row mt-5 mb-3">
+                <div class="col-sm">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.pages.index') }}" title="Strona główna"><i class="fas fa-home"></i> Strona główna</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.product.category.show', [$category]) }}" title="Kategorie"><i class="fas fa-arrow-left"></i> Powrót do kategorii {{ $category->name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 @endsection

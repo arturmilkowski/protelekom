@@ -39,8 +39,16 @@
                         </tr>
                 </table>
             </div>
-            <div class="col-sm">
-                <a href="{{ route('frontend.pages.index') }}" class="card-link" title="Strona główna"><i class="fas fa-home"></i> Strona główna</a>
-                <a href="{{ route('frontend.product.index') }}" class="card-link" title="Produkty">Produkty</a>
+            <div class="row mt-5 mb-3">
+                <div class="col-sm">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.pages.index') }}" title="Strona główna"><i class="fas fa-home"></i> Strona główna</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.product.index') }}" title="Produkty">Produkty</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 @endsection

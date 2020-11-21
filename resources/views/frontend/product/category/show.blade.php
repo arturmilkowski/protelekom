@@ -35,4 +35,16 @@
                 <h2 class="col text-center">Brak produktów</h2>
 @endforelse
             </div>
+            <div class="row mt-5 mb-3">
+                <div class="col-sm">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.pages.index') }}" title="Strona główna"><i class="fas fa-home"></i> Strona główna</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('frontend.product.index') }}" class="card-link" title="Kategorie"><i class="fas fa-th"></i> Kategorie</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 @endsection

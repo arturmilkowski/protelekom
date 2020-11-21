@@ -16,6 +16,8 @@
                         <a href="{{ route('frontend.pages.privacy_policy') }}" title="Polityka prywatności">Polityka prywatności</a>
                         &mdash;&mdash;
                         <a href="{{ route('frontend.pages.rodo') }}" title="Prawa przysługujące z tytułu rodo">RODO</a>
+                        &mdash;&mdash;
+                        <a href="{{ config('settings.facebook') }}" title="facebook"><i class="fab fa-facebook-f"></i> Polub nas na Facebooku</a>
 @endif
                 </div>
             </footer>

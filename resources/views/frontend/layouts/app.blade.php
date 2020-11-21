@@ -26,7 +26,7 @@
 @endif
         <div class="container-fluid">
 @yield('content')
-            @include('frontend.includes.nav1')
+            {{--@include('frontend.includes.nav1')--}}
             @include('frontend.includes.footer')
         </div>
         <script src="{{ mix('js/app.js') }}"></script>
