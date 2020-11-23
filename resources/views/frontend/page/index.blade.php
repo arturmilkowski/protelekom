@@ -9,16 +9,16 @@
 
 @endisset
             {{--@include('frontend.page.includes.slogan')--}}
-{{--
+
 @if ($posts->count() > 0)
-            <div class="row mt-5 mb-3"><h6 class="h1 col-sm"><a href="{{ route('frontend.blog.posts.index') }}" title="Blog">Blog</a></h6></div>
-            <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
+            <div class="row mt-5 mb-3"><h6 class="h1 col-sm">{{--<a href="{{ route('frontend.blog.posts.index') }}" title="Blog">Blog</a>--}}Blog</h6></div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mb-5">
 @foreach ($posts as $post)
                 @include('frontend.page.includes.post', ['post' => $post])
 @endforeach
             </div>
 @endif
---}}
+
 {{--
 @if ($products->count() > 0)
             <div class="row mt-5 mb-3"><h5 class="h1 col-sm"><a href="{{ route('frontend.product.index') }}" title="Produkty">Produkty</a></h5></div>
@@ -50,15 +50,16 @@
                                         Pokaż <i class="fas fa-angle-right"></i>
                                     </a>
                                     --}}
-
-                                    <a class="btn btn-primary"
-                                        href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}"
-                                        role="button" title="{{ $type->product->brand->name }} {{ $type->product->name }} {{ $type->name }}">
-                                        Pokaż 
-                                        <i class="fas fa-angle-right"></i>
-                                    </a>
                                 </span>
                             </p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-primary"
+                                href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}"
+                                role="button" title="{{ $type->product->brand->name }} {{ $type->product->name }} {{ $type->name }}">
+                                Pokaż 
+                                <i class="fas fa-angle-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

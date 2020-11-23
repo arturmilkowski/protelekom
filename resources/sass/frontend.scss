@@ -10,9 +10,25 @@
 }
 */
 
+$border-radius: 2;
+$primary: #6e1e62;
+
 .navbar-brand {
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 a.navbar-brand:hover {
-    background-color: #F9A61A;
+    background-color: #eb9605;
+}
+
+.card-footer {
+    background-color: #fbfbfb;
+}
+
+footer {
+    font-size: 80%;
+    margin-top: 2rem;
+}
+footer div {
+    border-top: 1px dotted $gray-300;
+    padding-top: 0.5rem;
 }
