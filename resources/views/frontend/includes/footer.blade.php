@@ -7,16 +7,16 @@
                         &bull; user: <strong>{{ Auth::user()->name }}</strong> &bull; uprawnienia: <strong>{{ Auth::user()->role->display_name }}</strong>
 @endauth
 @else
-                        2000 &mdash; 2020
-                        &mdash;&mdash;
+                        2000 - 2020
+                        &mdash;
                         {{ config('settings.company_name') }}
-                        &mdash;&mdash;
+                        &mdash;
                         <a href="{{ route('frontend.pages.cookie') }}" title="Pliki cookie">Informacje o ciastkach</a>
-                        &mdash;&mdash;
+                        &mdash;
                         <a href="{{ route('frontend.pages.privacy_policy') }}" title="Polityka prywatności">Polityka prywatności</a>
-                        &mdash;&mdash;
+                        &mdash;
                         <a href="{{ route('frontend.pages.rodo') }}" title="Prawa przysługujące z tytułu rodo">RODO</a>
-                        &mdash;&mdash;
+                        &mdash;
                         <a href="{{ config('settings.facebook') }}" title="facebook"><i class="fab fa-facebook-f"></i> Polub nas na Facebooku</a>
 @endif
                 </div>

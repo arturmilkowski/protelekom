@@ -21,6 +21,30 @@
 @endsection
 --}}
 @section('content')
+            <article class="row justify-content-center mt-5 mb-3">
+                <div class="col-lg-6">
+@if ($post->img)
+                    <div class="row justify-content-center text-center">
+                        <img class="img-fluid" src="{{ asset('storage') . config('settings.storage.posts_storage_path') . '/' . $post->img }}" alt="{{ $post->title }}" />
+                    </div>
+@endif
+                    <h1 class="mt-5 mb-3">{{ $post->title }}</h1>
+                    <p class="lead text-justify">{!! $post->intro !!}</p>
+                    <p class="text-justify">{!! $post->content  !!}</p>
+                    <p><p class="card-text"><small class="text-muted">data publikacji: <time>{{ $post->created_at->format('Y-m-d') }}</time></small></p></p>
+@if (count($post->tags) > 0)
+                    <p>
+                        tagi:
+@foreach ($post->tags as $tag)
+                            <a href="{{ route('frontend.blog.tags.show', $tag->slug) }}" class="badge badge-light" title="zobacz wpisy dla tagu">{{ $tag->name }}</a>
+@endforeach
+                    </p>
+@endif
+                    <a href="{{ route('frontend.pages.index') }}" class="btn btn-light"><i class="fas fa-home"></i> strona główna</a>
+                    <a href="{{ route('frontend.blog.posts.index') }}" class="btn btn-light"><i class="fas fa-angle-left"></i> powrót do bloga</a>
+                </div>
+            </article>
+            {{--
             <article>
                 <h1 class="mt-5 mb-3">{{ $post->title }}</h1>
 @if ($post->img)
@@ -60,6 +84,7 @@
                     <a href="{{ route('frontend.blog.posts.index') }}" class="btn btn-light"><i class="fas fa-angle-left"></i> powrót do bloga</a>
                 </div>
             </div>
+            --}}
             {{--
             @include('frontend.blog.post.includes.comment_form')
 @if (count($post->comments) > 0)

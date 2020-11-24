@@ -24,6 +24,12 @@ a.navbar-brand:hover {
     background-color: #fbfbfb;
 }
 
+.justify-content-center {
+    -webkit-box-pack: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
 footer {
     font-size: 80%;
     margin-top: 2rem;
