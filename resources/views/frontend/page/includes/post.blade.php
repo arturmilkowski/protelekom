@@ -11,7 +11,7 @@
                         <p class="card-text"><small class="text-muted"><time datetime="{{ $post->created_at }}">{{ $post->created_at->diffForHumans() }}</time></small></p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary {{--btn-outline-secondary btn-sm--}}" href="{{ route('frontend.blog.posts.show', $post) }}" title="Cały wpis">
+                        <a class="btn btn-outline-primary btn-sm" href="{{ route('frontend.blog.posts.show', $post) }}" title="Cały wpis">
                             Czytaj dalej <i class="fas fa-angle-right"></i>
                         </a>
                     </div>

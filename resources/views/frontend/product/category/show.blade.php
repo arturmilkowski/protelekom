@@ -24,7 +24,7 @@
                                         </a>
                                     </h2>
                                     <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" class="btn btn-primary" title="{{ $product->brand->name }} {{ $product->name }}">
-                                        Pokaż
+                                        Pokaż <i class="fas fa-angle-right"></i>
                                     </a>
                                 </div>
                             </div>
