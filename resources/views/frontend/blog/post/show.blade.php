@@ -30,7 +30,7 @@
 @endif
                     <h1 class="mt-5 mb-3">{{ $post->title }}</h1>
                     <p class="lead text-justify">{!! $post->intro !!}</p>
-                    <p class="text-justify">{!! $post->content  !!}</p>
+                    <p class="text-justify">{!! nl2br($post->content)  !!}</p>
                     <p><p class="card-text"><small class="text-muted">data publikacji: <time>{{ $post->created_at->format('Y-m-d') }}</time></small></p></p>
 @if (count($post->tags) > 0)
                     <p>

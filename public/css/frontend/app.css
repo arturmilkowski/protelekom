@@ -10911,6 +10911,15 @@ a.text-dark:focus {
 }
 */
 
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+table th {
+  color: #5d5d5d;
+}
+
 /*$primary: #6e1e62;*/
 
 .navbar-brand {
@@ -10923,6 +10932,15 @@ a.navbar-brand:hover {
 
 .card-footer {
   background-color: #fbfbfb;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.contact-jumbo {
+  background: #fff4e2;
+  background: linear-gradient(90deg, #fff4e2 0%, #ffeed2 100%);
 }
 
 footer {

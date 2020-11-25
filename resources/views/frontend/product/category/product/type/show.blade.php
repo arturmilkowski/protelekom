@@ -5,17 +5,20 @@
 @section('keywords', $product->brand->name . ', ' . $product->name)
 
 @section('content')
-            <div class="row mt-5 mb-3">
+            <div class="row text-center justify-content-center mt-5 mb-3">
                 <div class="col-sm">
                     <h1>{{ $product->brand->name }} {{ $product->name }} <small class="text-muted">{{ $type->name }}</small></h1>
                 </div>
             </div>
 @if ($type->img)
-            <div class="col-sm">
-                <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="" alt="{{ $product->brand->name }} {{ $product->name }} {{ $type->name }}">
+            <div class="row text-center justify-content-center">
+                <div class="col-sm">
+                    <img class="img-fluid" src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" alt="{{ $product->brand->name }} {{ $product->name }} {{ $type->name }}">
+                </div>
             </div>
 @endif
-            <div class="col-sm mt-5">
+            <div class="row justify-content-center">
+            <div class="col-lg-10 mt-5">
                 <table class="table">
                     <tbody>
                         <tr>
@@ -42,6 +45,8 @@
                         </tr>
                 </table>
             </div>
+            </div>
+            
             <div class="row mt-5 mb-3">
                 <div class="col-sm">
                     <ul class="nav">

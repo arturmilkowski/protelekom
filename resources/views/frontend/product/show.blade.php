@@ -25,7 +25,7 @@
 @forelse ($product->types as $type)
                 <div class="card">
 @if ($type->img)
-                    <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $type->name }}" loading="lazy">
+                    <img class="card-img-top" src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" alt="{{ $product->name }} {{ $type->name }}" loading="lazy">
 @endif
                     <div class="card-body">
                         <h2 class="card-title">{{ $type->name }} {{ $product->category->name }} {{-- $product->concentration->name --}}</h2>

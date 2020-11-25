@@ -13,13 +13,13 @@
                         <div class="row no-gutters">
 @if ($product->img)
                             <div class="col-md-4">
-                                <img src="{{ asset('storage') . '/' . 'img/products' . '/' . $product->img }}" class="card-img" alt="{{ $product->brand->name }} {{ $product->name }}">
+                                <img src="{{ asset('storage') . '/' . 'img/products' . '/' . $product->img }}" class="card-img" alt="{{ $product->brand->name }} {{ $product->name }}" alt="{{ $product->brand->name }} {{ $product->name }}">
                             </div>
 @endif
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h2 class="card-title">
-                                        <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="">
+                                        <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="{{ $product->brand->name }} {{ $product->name }}">
                                             {{ $product->name }}
                                         </a>
                                     </h2>

@@ -9,6 +9,9 @@
     background-color: #F8F8FF !important;
 }
 */
+.container-fluid, table th  {
+    color: #5d5d5d;
+}
 
 $border-radius: 2;
 /*$primary: #6e1e62;*/
@@ -28,6 +31,11 @@ a.navbar-brand:hover {
     -webkit-box-pack: center!important;
     -ms-flex-pack: center!important;
     justify-content: center!important;
+}
+
+.contact-jumbo {
+    background: rgb(255,244,226);
+background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);
 }
 
 footer {
