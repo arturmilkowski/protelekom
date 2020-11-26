@@ -10943,9 +10943,37 @@ a.navbar-brand:hover {
   background: linear-gradient(90deg, #fff4e2 0%, #ffeed2 100%);
 }
 
+.pulse {
+  -webkit-animation: pulse 3s;
+          animation: pulse 3s;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    color: #ffffff;
+  }
+
+  100% {
+    color: #5d5d5d;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #ffffff;
+  }
+
+  100% {
+    color: #5d5d5d;
+  }
+}
+
+.border-top {
+  border-top: 1px dotted #dee2e6;
+}
+
 footer {
   font-size: 80%;
-  margin-top: 2rem;
 }
 
 footer div {

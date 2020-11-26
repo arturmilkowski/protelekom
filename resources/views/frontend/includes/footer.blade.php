@@ -1,4 +1,4 @@
-            <footer class="row">
+            <footer class="row mt-2">
                 <div class="col-sm">
 @if (App::environment() == 'local' || App::environment() == 'testing')
                         env: <strong>{{ App::environment() }}</strong> &bull;
@@ -7,17 +7,7 @@
                         &bull; user: <strong>{{ Auth::user()->name }}</strong> &bull; uprawnienia: <strong>{{ Auth::user()->role->display_name }}</strong>
 @endauth
 @else
-                        2000 - 2020
-                        &mdash;
-                        {{ config('settings.company_name') }}
-                        &mdash;
-                        <a href="{{ route('frontend.pages.cookie') }}" title="Pliki cookie">Informacje o ciastkach</a>
-                        &mdash;
-                        <a href="{{ route('frontend.pages.privacy_policy') }}" title="Polityka prywatności">Polityka prywatności</a>
-                        &mdash;
-                        <a href="{{ route('frontend.pages.rodo') }}" title="Prawa przysługujące z tytułu rodo">RODO</a>
-                        &mdash;
-                        <a href="{{ config('settings.facebook') }}" title="facebook"><i class="fab fa-facebook-f"></i> Polub nas na Facebooku</a>
+                    2000 &mdash; {{ date("Y") }} &mdash;&mdash; {{ config('settings.company_name') }}
 @endif
                 </div>
             </footer>

@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="{{ mix('css/frontend/app.css') }}">
         <script defer src="https://use.fontawesome.com/releases/v5.12.0/js/all.js"></script>
         <title>@yield('title')</title>
-        <meta name="description" content="@yield('description', 'ręcznie tworzone wody toaletowe i kolońskie. naturalne składniki. dobra jakość')">
-        <meta name="keywords" content="@yield('keywords', 'woda toaletowa, woda kolońska, męska woda kolońska, lawendowa woda kolońska, polska woda kolońska, klasyczna woda kolońska, naturalna woda kolońska, zapachy lawendowe, lawendowe perfumy męskie, lawenda, lawenda dla panów')">
+        <meta name="description" content="@yield('description', 'Telefony komórkowe, smartfony, tablety i alkomaty. Serwis telefonów komórkowych i smartfonów.')">
+        <meta name="keywords" content="@yield('keywords', 'smartfony, telefony komórkowe, tablety, alkomaty, serwis gsm')">
         @include('frontend.includes.favicon')
         @include('frontend.includes.open_graph_basic')
         @yield('open_graph_optional')
@@ -26,7 +26,7 @@
 @endif
         <div class="container-fluid">
 @yield('content')
-            {{--@include('frontend.includes.nav1')--}}
+            @include('frontend.includes.nav1')
             @include('frontend.includes.footer')
         </div>
         <script src="{{ mix('js/app.js') }}"></script>

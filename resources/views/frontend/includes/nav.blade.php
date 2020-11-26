@@ -14,7 +14,7 @@
                         <a class="nav-link" href="{{ route('frontend.product.index') }}" title="Kategorie produków">Produkty @if($currentRouteName == 'frontend.product')<span class="sr-only">(current)</span>@endif</a>
                     </li>
                     <li class="nav-item @if($currentRouteName == 'frontend.blog') active @endif">
-                        <a class="nav-link" href="{{ route('frontend.blog.posts.index') }}" title="blog">Blog @if($currentRouteName == 'frontend.blog')<span class="sr-only">(current)</span>@endif</a>
+                        <a class="nav-link" href="{{ route('frontend.blog.posts.index') }}" title="Aktualne informacje">Informacje @if($currentRouteName == 'frontend.blog')<span class="sr-only">(current)</span>@endif</a>
                     </li>
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.service') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.service') }}" title="Serwis">Serwis @if($currentRouteName == 'frontend.pages.service')<span class="sr-only">(current)</span>@endif</a>

@@ -11,7 +11,11 @@
             {{--@include('frontend.page.includes.slogan')--}}
 
 @if ($posts->count() > 0)
-            <div class="row mt-5 mb-2"><h6 class="h2 col-sm"><a href="{{ route('frontend.blog.posts.index') }}" title="Blog">Blog</a></h6></div>
+            <div class="row mt-5 mb-2">
+                <h6 class="h2 col-sm">
+                    <a href="{{ route('frontend.blog.posts.index') }}" title="Aktualne informacje"><i class="far fa-newspaper"></i> Informacje</a>
+                </h6>
+            </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mb-5">
 @foreach ($posts as $post)
                 @include('frontend.page.includes.post', ['post' => $post])
@@ -31,7 +35,11 @@
 --}}
 
 @if ($types->count() > 0)
-            <div class="row mt-5 mb-2"><h5 class="h2 col-sm"><a href="{{ route('frontend.product.index') }}" title="Produkty">Produkty</a></h5></div>
+            <div class="row mt-5 mb-2">
+                <h5 class="h2 col-sm">
+                    <a href="{{ route('frontend.product.index') }}" title="Produkty"><i class="fab fa-product-hunt"></i> Produkty</a>
+                </h5>
+            </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 @foreach ($types as $type)
                 @include('frontend.page.includes.type', ['type' => $type])

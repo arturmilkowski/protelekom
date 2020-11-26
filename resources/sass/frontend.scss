@@ -4,16 +4,18 @@
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
 /*
 .bg-light {
     background-color: #F8F8FF !important;
 }
 */
+
 .container-fluid, table th  {
     color: #5d5d5d;
 }
 
-$border-radius: 2;
+$border-radius: 1;
 /*$primary: #6e1e62;*/
 
 .navbar-brand {
@@ -35,12 +37,27 @@ a.navbar-brand:hover {
 
 .contact-jumbo {
     background: rgb(255,244,226);
-background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);
+    background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);
+}
+
+.pulse {
+    animation: pulse 3s;
+}
+@keyframes pulse {
+    0% {
+      color: #ffffff;
+    }
+    100% {
+      color: #5d5d5d;
+    }
+}
+
+.border-top {
+    border-top: 1px dotted $gray-300;
 }
 
 footer {
     font-size: 80%;
-    margin-top: 2rem;
 }
 footer div {
     border-top: 1px dotted $gray-300;

@@ -9,7 +9,7 @@
 @endsection
 --}}
 @section('content')
-            <div class="row mt-5 mb-3"><div class="col-sm"><h1>Serwis</h1></div></div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h1><i class="fas fa-tools"></i> Serwis</h1></div></div>
             <div class="row">
                 <div class="col-sm">
                     <div class="card my-card">

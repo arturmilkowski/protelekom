@@ -28,7 +28,7 @@
                         <img class="img-fluid" src="{{ asset('storage') . config('settings.storage.posts_storage_path') . '/' . $post->img }}" alt="{{ $post->title }}" />
                     </div>
 @endif
-                    <h1 class="mt-5 mb-3">{{ $post->title }}</h1>
+                    <h1 class="mt-5 mb-3 pulse">{{ $post->title }}</h1>
                     <p class="lead text-justify">{!! $post->intro !!}</p>
                     <p class="text-justify">{!! nl2br($post->content)  !!}</p>
                     <p><p class="card-text"><small class="text-muted">data publikacji: <time>{{ $post->created_at->format('Y-m-d') }}</time></small></p></p>

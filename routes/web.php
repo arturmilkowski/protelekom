@@ -63,12 +63,12 @@ Route::namespace('Frontend')->name('frontend.')->group(
             function () {
                 Route::namespace('Post')->name('posts.')->group(
                     function () {
-                        Route::get('/blog', 'Index')->name('index');
+                        Route::get('/informacje', 'Index')->name('index');
 
                         Route::namespace('Comment')->name('comments.')->group(
                             function () {
-                                Route::post('/blog/{post:slug}/komentarze', 'Store')->name('store');
-                                Route::get('/blog/komentarze/dziekuje-za-komentarz', 'Thank')->name('thank');
+                                Route::post('/informacje/{post:slug}/komentarze', 'Store')->name('store');
+                                Route::get('/informacje/komentarze/dziekuje-za-komentarz', 'Thank')->name('thank');
                             }
                         );
                     }
