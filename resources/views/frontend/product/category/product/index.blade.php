@@ -9,7 +9,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 @foreach ($product->types as $type)
                 <div class="col mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 my-shadow-sm">
 @if ($type->img)
                         <a href="{{ route('frontend.product.category.product.type.show', [$category, $product, $type]) }}" title="{{ $type->product->brand->name }} {{ $type->product->name }}">
                             <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $type->name }}" loading="lazy">

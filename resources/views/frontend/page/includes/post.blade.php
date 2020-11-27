@@ -1,5 +1,5 @@
-                <div class="col">
-                    <article class="card h-100 mb-5">
+                <div class="col mb-3">
+                    <article class="card h-100 mb-5 my-shadow-sm">
 @if ($post->img)
                         <a href="{{ route('frontend.blog.posts.show', $post) }}" title="czytaj dalej">
                             <img src="{{ asset('storage') . config('settings.storage.posts_storage_path') . '/' . $post->img }}" class="card-img-top" alt="{{ $post->title }}" loading="lazy">

@@ -9,7 +9,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 @forelse ($products as $product)
                 <div class="col">
-                    <div class="card mb-4">
+                    <div class="card mb-4 my-shadow-sm">
                         <div class="row no-gutters">
 @if ($product->img)
                             <div class="col-md-4">

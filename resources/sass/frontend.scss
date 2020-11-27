@@ -36,8 +36,12 @@ a.navbar-brand:hover {
 }
 
 .contact-jumbo {
-    background: rgb(255,244,226);
-    background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);
+    /*background: rgb(255,244,226);
+    background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);*/
+    /*background: rgb(255,244,226);
+    background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(230,226,220,1) 100%);*/
+    background: rgb(227,212,225);
+    background: linear-gradient(90deg, rgba(227,212,225,1) 0%, rgba(247,247,247,1) 100%);
 }
 
 .pulse {
@@ -50,6 +54,14 @@ a.navbar-brand:hover {
     100% {
       color: #5d5d5d;
     }
+}
+
+.my-shadow-sm:hover {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;*/
+}
+.my-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .border-top {

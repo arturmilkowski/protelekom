@@ -1,8 +1,8 @@
-                <div class="col mb-4">
-                    <div class="card h-100">
+                <div class="col mb-3">
+                    <div class="card h-100 my-shadow-sm">
 @if ($type->img)
                         <a href="{{ route('frontend.product.category.product.type.show', [$type->product->category, $type->product, $type]) }}" title="{{ $type->product->brand->name }} {{ $type->product->name }} {{ $type->name }}">
-                            <img src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" class="card-img-top" alt="{{ $type->name }}" loading="lazy">
+                            <img class="card-img-top" src="{{ asset(config('settings.storage.types_storage_path')) . '/' . $type->img }}" alt="{{ $type->name }}" loading="lazy">
                         </a>
 @endif
                         <div class="card-body">

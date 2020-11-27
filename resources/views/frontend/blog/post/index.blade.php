@@ -11,7 +11,7 @@
             <div class="card-columns">
 @foreach ($posts as $post)
                 {{--<div class="col mb-4">--}}
-                    <div class="card {{--my-post-card--}}">
+                    <div class="card my-shadow-sm">
 @if ($post->img)
                         <a href="{{ route('frontend.blog.posts.show', $post) }}" title="{{ $post->title }}">
                             <img src="{{ asset('storage') . config('settings.storage.posts_storage_path') . '/' . $post->img }}" class="card-img-top" alt="{{ $post->title }}">
