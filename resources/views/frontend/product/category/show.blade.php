@@ -20,7 +20,7 @@
                                 <div class="card-body">
                                     <h2 class="card-title">
                                         <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" title="{{ $product->brand->name }} {{ $product->name }}">
-                                            {{ $product->name }}
+                                            {{ $product->brand->name }} {{ $product->name }}
                                         </a>
                                     </h2>
                                     <a href="{{ route('frontend.product.category.product.index', [$product->category, $product]) }}" class="btn btn-primary" title="{{ $product->brand->name }} {{ $product->name }}">
