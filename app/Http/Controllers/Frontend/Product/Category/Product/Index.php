@@ -8,23 +8,19 @@ use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use App\Models\{Category, Product};
 
-// use App\Models\Product\Brand;
-
-// use Illuminate\Support\Facades\Cache;
-// use Illuminate\Support\Facades\DB;
-// use App\Models\Product\Brand;
-// use App\Models\{Product, Type};
-// use App\Services\Basket;
-
 class Index extends Controller
 {
+    /**
+     * Product index.
+     *
+     * @param Category $category Category
+     * @param Product  $product  Product
+     * 
+     * @return View
+     */
     public function __invoke(Category $category, Product $product): View
     {
-        // string $brand
-        // dd($category);
-        // return __FUNCTION__;
         $currentRouteName = 'frontend.product';
-        // $categories = Category::all();
         
         return view(
             'frontend.product.category.product.index',

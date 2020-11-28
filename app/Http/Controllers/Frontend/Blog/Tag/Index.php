@@ -7,13 +7,12 @@ namespace App\Http\Controllers\Frontend\Blog\Tag;
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use App\Models\Blog\Tag;
-use Illuminate\Support\Facades\Cache;
+// use Illuminate\Support\Facades\Cache;
 
 class Index extends Controller
 {
-    public function __invoke() //: View
+    public function __invoke(): View
     {
-        // return __FUNCTION__;
         $tags = Tag::all();
         $currentRouteName = 'frontend.blog';
 

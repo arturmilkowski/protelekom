@@ -74,6 +74,11 @@ class Product extends Model
         return $this->hasMany('App\Models\Type')->orderBy('created_at', 'desc');
     }
 
+    /**
+     * Get the comments for the product.
+     *
+     * @return HasMany
+     */
     public function reviews(): HasMany
     {
         return $this->hasMany('App\Models\Product\Review')

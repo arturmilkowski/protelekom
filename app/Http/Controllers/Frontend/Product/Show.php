@@ -18,22 +18,23 @@ class Show extends Controller
     /**
      * Show product page.
      *
-     * @param Basket  $basket  Basket
      * @param Product $product Product
      * 
      * @return View
      */
-    public function __invoke(Basket $basket, Product $product): View
+    public function __invoke(Product $product)//: View  // Basket $basket,
     {
+        return 'f';
         $productKey = 'product' . $product->id;
-        $productRatingKey = 'product_rating' . $product->id;
-        $productReviewCountKey = 'product_review_count' . $product->id;
+        // $productRatingKey = 'product_rating' . $product->id;
+        // $productReviewCountKey = 'product_review_count' . $product->id;
 
         if (Cache::has($productKey)) {
             $product = Cache::get($productKey);
-            $rating = Cache::get($productRatingKey);
-            $reviewCount = Cache::get($productReviewCountKey);
+            // $rating = Cache::get($productRatingKey);
+            // $reviewCount = Cache::get($productReviewCountKey);
         } else {
+            /*
             $rating = DB::table('reviews')
                 ->where('product_id', $product->id)
                 ->get()
@@ -41,20 +42,20 @@ class Show extends Controller
             $reviewCount = DB::table('reviews')
                 ->where('product_id', $product->id)
                 ->count();
+            */
             $product = Product::with(
-                ['types', 'category', 'concentration', 'reviews']
+                ['types', 'category']
             )->find($product->id);
 
-            Cache::put($productRatingKey, $rating, self::SECONDS);
-            Cache::put($productReviewCountKey, $reviewCount, self::SECONDS);
+            // Cache::put($productRatingKey, $rating, self::SECONDS);
+            // Cache::put($productReviewCountKey, $reviewCount, self::SECONDS);
             Cache::put($productKey, $product, self::SECONDS);
         }
-
         $currentRouteName = 'frontend.product';
 
         return view(
             'frontend.product.show',
-            compact('product', 'rating', 'reviewCount', 'basket', 'currentRouteName')
+            compact('product', 'currentRouteName')
         );
     }
 }
