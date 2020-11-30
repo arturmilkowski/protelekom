@@ -10939,10 +10939,6 @@ a.navbar-brand:hover {
 }
 
 .contact-jumbo {
-  /*background: rgb(255,244,226);
-  background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(255,238,210,1) 100%);*/
-  /*background: rgb(255,244,226);
-  background: linear-gradient(90deg, rgba(255,244,226,1) 0%, rgba(230,226,220,1) 100%);*/
   background: #e3d4e1;
   background: linear-gradient(90deg, #e3d4e1 0%, #f7f7f7 100%);
 }
@@ -10983,6 +10979,10 @@ a.navbar-brand:hover {
 
 .border-top {
   border-top: 1px dotted #dee2e6;
+}
+
+.width300 {
+  max-width: 300px;
 }
 
 footer {
