@@ -7,7 +7,7 @@
 @section('content')
             <div class="row mt-5 mb-3"><div class="col-sm"><h1>{{ $product->brand->name . ' ' . $product->name }}</h1></div></div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-@foreach ($product->types as $type)
+@foreach ($types as $type)
                 <div class="col mb-4">
                     <div class="card h-100 my-shadow-sm">
 @if ($type->img)

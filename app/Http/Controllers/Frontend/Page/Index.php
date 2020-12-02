@@ -37,7 +37,7 @@ class Index extends Controller
             function () {
                 return Type::with(
                     ['product', 'product.category', 'product.brand']
-                )->latest()->take(10)->get();
+                )->where('hide', 0)->latest()->take(10)->get();
             }
         );  
         $currentRouteName = 'frontend.pages.index';        

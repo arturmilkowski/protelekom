@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Frontend\Product\Category\Product;
 
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
-use App\Models\{Category, Product};
+use App\Models\{Category, Product, Type};
 
 class Index extends Controller
 {
@@ -18,13 +18,17 @@ class Index extends Controller
      * 
      * @return View
      */
-    public function __invoke(Category $category, Product $product): View
+    public function __invoke(Category $category, Product $product)//: View
     {
+        $types = Type::where('product_id', '=', $product->id)
+            ->where('hide', 0)
+            ->latest()
+            ->get();
         $currentRouteName = 'frontend.product';
         
         return view(
             'frontend.product.category.product.index',
-            compact('category', 'product', 'currentRouteName')
+            compact('category', 'product', 'types', 'currentRouteName')
         );
     }
 }
