@@ -16,6 +16,7 @@
         @yield('open_graph_optional')
         @section('noindex')@show
 
+        <livewire:styles />
 @yield('ldjson')
 
     </head>
@@ -25,10 +26,12 @@
         @include('frontend.includes.alert')
 @endif
         <div class="container-fluid">
+            <livewire:frontend.search />
 @yield('content')
             @include('frontend.includes.nav1')
             @include('frontend.includes.footer')
         </div>
         <script src="{{ mix('js/app.js') }}"></script>
+        <livewire:scripts />
     </body>
 </html>
