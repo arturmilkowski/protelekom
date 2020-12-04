@@ -21,7 +21,6 @@ class Search extends Component
         $searchedProducts = collect([]);
         $searchedPosts = collect([]);
         if ($this->search) {
-            sleep(2);
             /*
             $searchedProducts = Product::where(
                 'name', 'like', '%'.$this->search.'%'
@@ -35,8 +34,7 @@ class Search extends Component
                 ->orWhere('.products.name', 'like', '%'.$this->search.'%')
                 ->select('products.*', 'brands.name as brand_name')
                 ->get();
-            
-            // dd($searchedProducts);
+                        
             $searchedPosts = Post::where(
                 'title', 'like', '%'.$this->search.'%'
             )
