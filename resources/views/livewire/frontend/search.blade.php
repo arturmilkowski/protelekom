@@ -1,14 +1,14 @@
 <div>
-    <form>
+    <form wire:submit.prevent="render">
         <div class="form-group mt-5 mb-5">
             <input wire:model="search" wire:keydown.escape="handleEscape" type="text" class="form-control" placeholder="Wpisz szukaną frazę">
         </div>
     </form>
-{{--
+
     <div wire:loading class="spinner-border text-secondary mb-3" role="status">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only">Szukam...</span>
     </div>
---}}
+
 @if ($searchedProducts->count() > 0)
     <table class="table mb-3">
         <thead>
@@ -20,8 +20,8 @@
 @foreach($searchedProducts as $product)
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td><a href="{{ route('frontend.product.category.product.index', [$product->category, $product->slug]) }}" title="{{ $product->name }}">{{ $product->name }}</a></td>
-                <td>{{ $product->brand->name }}</td>
+                <td><a href="{{ route('frontend.product.category.product.index', [$product->category_id, $product->slug]) }}" title="{{ $product->name }}">{{ $product->name }}</a></td>
+                <td>{{ $product->brand_name }}</td>
             </tr>
 @endforeach
         </tbody>
