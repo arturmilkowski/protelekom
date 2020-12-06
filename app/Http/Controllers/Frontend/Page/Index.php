@@ -44,7 +44,7 @@ class Index extends Controller
 
         return view(
             'frontend.page.index',
-            compact('posts', 'types', 'currentRouteName')
+            compact('posts', 'types', 'basket', 'currentRouteName')
         );
     }
 }

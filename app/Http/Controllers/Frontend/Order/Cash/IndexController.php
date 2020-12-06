@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Services\Basket;
 use App\Models\SaleDocument;
 use App\Models\Delivery\Delivery;
-use Tests\Unit\Order\ShippingCost\ShippingCostTest;
+// use Tests\Unit\Order\ShippingCost\ShippingCostTest;
 
 class IndexController extends Controller
 {
@@ -34,6 +34,7 @@ class IndexController extends Controller
         }
         $pocztaPolska = 1;
         $delivery = $delivery->find($pocztaPolska);
+        // dd($delivery);
         // $productsCount = $basket->productsCount();
         $listPolecony = 1;
         // $sizeS = 2;

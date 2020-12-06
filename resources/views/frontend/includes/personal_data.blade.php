@@ -1,27 +1,27 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th scope="row">imię i nazwisko</th>
+                                <th scope="row">Imię i nazwisko</th>
                                 <td>{{ $user->name }} {{ $user->profile->lastname }}</td>
                             </tr>
                             <tr>
-                                <th scope="row">ulica i numer mieszkania</th>
+                                <th scope="row">Ulica i numer mieszkania</th>
                                 <td>{{ $user->profile->street }}</td>
                             </tr>
                             <tr>
-                                <th scope="row">kod pocztowy i miasto</th>
+                                <th scope="row">Kod pocztowy i miasto</th>
                                 <td>{{ $user->profile->zip_code }} {{ $user->profile->city }}</td>
                             </tr>
                             <tr>
-                                <th scope="row">województwo</th>
+                                <th scope="row">Województwo</th>
                                 <td>{{ $user->profile->voivodeship->name }}</td>
                             </tr>
                             <tr>
-                                <th scope="row">email</th>
+                                <th scope="row">Email</th>
                                 <td>{{ $user->email }}</td>
                             </tr>
                             <tr>
-                                <th scope="row">telefon</th>
+                                <th scope="row">Telefon</th>
                                 <td>{{ $user->profile->phone }}</td>
                             </tr>
                         </tbody>

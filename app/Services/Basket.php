@@ -283,8 +283,8 @@ class Basket
         $item->type_name = $type->name;
         $item->type_size_id = $type->size_id;
         $item->name = $type->product->name;
-        $item->concentration = $type->product->concentration->name;
-        $item->category = $type->product->category->name;  // concentration->
+        $item->brand = $type->product->brand->name;
+        $item->category = $type->product->category->name;
         $item->price = $type->price;
         $item->quantity = 1;
         $item->subtotal_price = $type->price;

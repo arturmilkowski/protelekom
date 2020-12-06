@@ -1,8 +1,8 @@
                     <table class="table table-sm">
                         <thead>
                             <tr>
-                                <th scope="col">firma</th>
-                                <th scope="col">koszt</th>
+                                <th scope="col">Firma</th>
+                                <th scope="col">Koszt</th>
                             </tr>
                         </thead>
                         <tbody>                            

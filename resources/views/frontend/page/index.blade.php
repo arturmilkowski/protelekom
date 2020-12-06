@@ -23,17 +23,6 @@
             </div>
 @endif
 
-{{--
-@if ($products->count() > 0)
-            <div class="row mt-5 mb-3"><h5 class="h1 col-sm"><a href="{{ route('frontend.product.index') }}" title="Produkty">Produkty</a></h5></div>
-            <div class="row row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
-@foreach ($products as $product)
-                @include('frontend.page.includes.product', ['product' => $product])
-@endforeach
-            </div>
-@endif
---}}
-
 @if ($types->count() > 0)
             <div class="row mt-5 mb-2">
                 <h5 class="h2 col-sm">
