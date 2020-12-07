@@ -1,5 +1,5 @@
-dodano komentarz:
+Dodano komentarz:
 {{ $comment->content }}
 
-autor: {{ $comment->author }}
-ip: {{ $comment->ip }}
+Autor: {{ $comment->author }}
+IP: {{ $comment->ip }}

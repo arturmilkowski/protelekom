@@ -1,1 +1,1 @@
-złożono zamówienie
+Złożono zamówienie

@@ -25,7 +25,7 @@ class OrderPlaced extends Mailable
     {
         return $this
             ->from(config('mail.from.address'))
-            ->subject('złożono zamówienie')
+            ->subject('Złożono zamówienie')
             ->text('emails.order.plain.placed');
     }
 }

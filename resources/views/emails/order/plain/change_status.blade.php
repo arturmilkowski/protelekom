@@ -1,2 +1,2 @@
-identyfikator zamówienia: {{ $order->number }}
-zmieniono status zamówienia na: {{ $order->status->display_name }}
+Identyfikator zamówienia: {{ $order->number }}
+Zmieniono status zamówienia na: {{ $order->status->display_name }}

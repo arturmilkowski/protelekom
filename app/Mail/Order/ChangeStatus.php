@@ -39,6 +39,6 @@ class ChangeStatus extends Mailable
         return $this
             ->from(config('mail.from.address'))
             ->text('emails.order.plain.change_status')
-            ->subject('zmiana statusu zamówienia');
+            ->subject('Zmiana statusu zamówienia');
     }
 }
