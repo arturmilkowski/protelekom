@@ -5,6 +5,10 @@
 @section('keywords', $product->brand->name . ', ' . $product->name)
 
 @section('content')
+@isset($basket)
+            @include('frontend.includes.basket')
+
+@endisset
             <div class="row text-center justify-content-center mt-5 mb-3">
                 <div class="col-sm">
                     <h1>{{ $product->brand->name }} {{ $product->name }} <small class="text-muted">{{ $type->name }}</small></h1>
@@ -43,6 +47,17 @@
                             <th scope="row">Cena:</th>
                             <td><strong>{{ $type->price }}<strong> zł</td>
                         </tr>
+@if ($type->quantity > 0)
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                <form action="{{ route('frontend.basket.store', [$type->id]) }}" method="POST">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn btn-outline-primary">do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>    
+                                </form>
+                            </td>
+                        </tr>
+@endif
                 </table>
             </div>
             </div>

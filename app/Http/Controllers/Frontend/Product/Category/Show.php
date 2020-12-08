@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\View\View;
 use App\Models\Category;
+use App\Services\Basket;
 
 class Show extends Controller
 {
@@ -17,11 +18,12 @@ class Show extends Controller
     /**
      * Show products in category.
      *
+     * @param Basket   $basket   Baket
      * @param Category $category Category
      * 
      * @return View
      */
-    public function __invoke(Category $category): View
+    public function __invoke(Basket $basket, Category $category): View
     {
         // $products = $category->products;
         
@@ -51,7 +53,7 @@ class Show extends Controller
         
         return view(
             'frontend.product.category.show',
-            compact('category', 'products', 'currentRouteName')
+            compact('category', 'products', 'basket', 'currentRouteName')
         );
     }
 }
