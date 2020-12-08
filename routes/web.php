@@ -36,7 +36,7 @@ Route::namespace('Frontend')->name('frontend.')->group(
             function () {
                 Route::namespace('Cash')->name('cash.')->group(
                     function () {
-                        Route::get('/kasa', 'IndexController')->name('index');
+                        Route::get('/kasa', 'Index')->name('index');
                     }
                 );
                 Route::namespace('WithoutRegistration')->name('without_registration.')->group(
