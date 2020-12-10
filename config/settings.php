@@ -8,7 +8,7 @@ return [
     'company_description' => 'Telefony komórkowe, smartfony, tablety i alkomaty',
     'site_keywords' => 'Telefony komórkowe, gsm, smartfony, tablety, alkomaty, serwis telefonów komórkowych',
     'account_number' => '12345678901234567890',
-    'mail' => 'arturmilkowsky@gmail.com', //'protelekom.firma@gmail.com',  // 'poczta@protelekom.pl',
+    'mail' => 'poczta@protelekom.pl',
     'company_address' => [
         'street' => 'Łukasiewicza 4',
         'city' => 'Oświęcim',

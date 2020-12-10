@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'poczta@protelekom.pl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 465),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,11 +56,11 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'protelekom.firma@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'poczta@protelekom.pl'),
         'name' => env('MAIL_FROM_NAME', 'Protelekom'),
     ],
     'reply_to' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'protelekom.firma@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'poczta@protelekom.pl'),
         'name' => env('MAIL_FROM_NAME', 'Protelekom'),
     ],
 
@@ -88,9 +88,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('poczta@protelekom.pl'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('zielonkapss'),
 
     /*
     |--------------------------------------------------------------------------

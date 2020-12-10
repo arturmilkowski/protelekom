@@ -42,3 +42,4 @@ mail/
 oradiag_centrum/
 tmp/
 /.npm
+config/mail.php
