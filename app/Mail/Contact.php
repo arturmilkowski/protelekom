@@ -31,7 +31,7 @@ class Contact extends Mailable
     public function build()
     {
         return $this
-            ->from(config('mail.from.address'))
+            ->from($this->email['email'])
             ->subject($this->email['subject'])
             ->text('emails.contact.plain');
     }

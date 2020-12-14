@@ -10994,3 +10994,7 @@ footer div {
   padding-top: 0.5rem;
 }
 
+.human {
+  visibility: hidden;
+}
+

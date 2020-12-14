@@ -22,8 +22,8 @@ class Store extends Controller
      */
     public function __invoke(StoreContact $request): RedirectResponse
     {
-        $unwanted = $request->input('unwanted');
-        if ($unwanted) {  // spam
+        $spam = $request->input('i_am_not_a_robot');
+        if ($spam) {
             return redirect()->route('frontend.pages.index');
         }
 

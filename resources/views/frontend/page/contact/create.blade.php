@@ -10,6 +10,7 @@
 --}}
 @section('content')
             <div class="row mt-5 mb-3"><div class="col-sm"><h1><i class="fas fa-address-book"></i> Kontakt</h1></div></div>
+            {{--
             <div class="row mb-5">
                 <div class="col-sm">
                     <div class="jumbotron contact-jumbo">
@@ -18,6 +19,7 @@
                     </div>
                 </div>
             </div>
+            --}}
             <div class="row mb-5">
                 <div class="col-sm">
                     <div class="card mb-4">
@@ -42,6 +44,43 @@
                             </p>        
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row mt-5 mb-3"><div class="col-sm"><h2><i class="fas fa-envelope"></i> Formularz kontaktowy</h2></div></div>
+            <div class="row mb-5">
+                <div class="col-sm">
+                    <form action="{{ route('frontend.pages.contacts.store') }}" method="POST">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="form-group">
+                            <label for="subject">Tytuł wiadomości</label>
+                            <input name="subject" value="{{ old('subject') }}" type="text" class="form-control @error('subject')is-invalid @enderror" id="subject" aria-describedby="subjectHelp" placeholder="pole obowiązkowe" minlength="3" maxlength="160" required>
+                            <small id="subjectHelp" class="form-text text-muted">Tytuł</small>
+@error('subject')
+                            <div class="invalid-feedback">{{ $message }}</div>
+@enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Treść</label>
+                            <textarea name="content" class="form-control @error('content')is-invalid @enderror" id="content" aria-describedby="contentHelp" rows="3" placeholder="pole obowiązkowe" maxlength="1000" required>{{ old('content') }}</textarea>
+                            <small id="contentHelp" class="form-text text-muted">Treść</small>
+@error('content')
+                            <div class="invalid-feedback">{{ $message }}</div>
+@enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input name="email" value="{{ old('email') }}" type="email" class="form-control @error('email')is-invalid @enderror" id="email" aria-describedby="emailHelp" placeholder="pole obowiązkowe" minlength="5" maxlength="30" required>
+                            <small id="emailHelp" class="form-text text-muted">Adres tylko do naszej wiadomości. Nie wysyłamy maili reklamowych</small>
+@error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+@enderror
+                        </div>
+                        <div class="form-check human">
+                            <input type="checkbox" class="form-check-input" id="human" name="i_am_not_a_robot">
+                            <label class="form-check-label" for="human">I am not a robot</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
 @endsection

@@ -15,7 +15,7 @@ class Thank extends Controller
      */
     public function __invoke(): Object
     {
-        // only if mail just send
+        // only if mail just has send
         if (session()->exists('mail_sent')) {
             session()->forget('mail_sent');
             $currentRouteName = 'frontend.pages.contacts';

@@ -18,7 +18,7 @@ Route::namespace('Frontend')->name('frontend.')->group(
                     function () {
                         Route::get('', 'Create')->name('create');
                         Route::post('', 'Store')->name('store');
-                        Route::get('dziekuje-za-kontakt', 'Thank')->name('thank');
+                        Route::get('dziekujemy-za-kontakt', 'Thank')->name('thank');
                     }
                 );
             }

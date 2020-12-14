@@ -27,7 +27,7 @@ class StoreContact extends FormRequest
     {
         return [
             'subject' => 'required|min:3|max:160',
-            'content' => 'required|max:1000',
+            'content' => 'required|max:3000',
             'email' => 'required|email|min:5|max:30',
         ];
     }
