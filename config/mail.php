@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'poczta@protelekom.pl'),
+    'host' => env('MAIL_HOST', 'smtp-k228y.vipserv.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -88,9 +88,9 @@ return [
     |
     */
 
-    'username' => env('poczta@protelekom.pl'),
+    'username' => env('MAIL_USERNAME'),
 
-    'password' => env('zielonkapss'),
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
