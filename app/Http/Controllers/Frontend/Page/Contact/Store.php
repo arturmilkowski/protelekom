@@ -29,7 +29,7 @@ class Store extends Controller
 
         $email = $request->validated();
 
-        Mail::to(config('mail.from.address'))->send(new Contact($email));
+        Mail::to('artur-milkowski@tlen.pl')->send(new Contact($email));
 
         return redirect()->route('frontend.pages.contacts.thank')
             ->with('mail_sent', 'mail sent');
