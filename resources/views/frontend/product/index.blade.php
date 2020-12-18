@@ -5,6 +5,7 @@
 @section('keywords', 'telefony komórkowe, smartfony, tablety, alkomaty')
 
 @section('content')
+            <livewire:frontend.search />
 @isset($basket)
             @include('frontend.includes.basket')
 

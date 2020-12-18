@@ -5,6 +5,7 @@
 @section('keywords', 'Telefony gsm, tablety i laptopy')
 
 @section('content')
+            <livewire:frontend.search />
 @if ($posts->count() > 0)
             <div class="row mt-5 mb-3"><div class="col-sm"><h1><i class="far fa-newspaper"></i> Informacje</h1></div></div>
             {{--<div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">--}}

@@ -5,6 +5,7 @@
 @section('keywords', $product->brand->name . ', ' . $product->name)
 
 @section('content')
+            <livewire:frontend.search />
 @isset($basket)
             @include('frontend.includes.basket')
 

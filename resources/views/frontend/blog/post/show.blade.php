@@ -21,6 +21,7 @@
 @endsection
 --}}
 @section('content')
+            <livewire:frontend.search />
             <article class="row justify-content-center mt-5 mb-3">
                 <div class="col-lg-6">
 @if ($post->img)

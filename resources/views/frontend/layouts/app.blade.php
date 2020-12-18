@@ -26,7 +26,6 @@
         @include('frontend.includes.alert')
 @endif
         <div class="container-fluid">
-            <livewire:frontend.search />
 @yield('content')
             @include('frontend.includes.nav1')
             @include('frontend.includes.footer')

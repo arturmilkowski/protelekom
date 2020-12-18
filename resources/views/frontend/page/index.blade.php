@@ -4,6 +4,7 @@
 @endsection
 @section('title', config('settings.company_name'))
 @section('content')
+            <livewire:frontend.search />
 @isset($basket)
             @include('frontend.includes.basket')
 
