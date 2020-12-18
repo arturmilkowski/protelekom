@@ -17,7 +17,7 @@
                                     Pokaż <i class="fas fa-angle-right"></i>
                                 </a>
 @if ($type->quantity > 0)
-                                {{--<button type="submit" class="btn btn-outline-primary">do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>--}}
+                                <button type="submit" class="btn btn-outline-primary">Do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>
 @endif
                             </form>
                         </div>

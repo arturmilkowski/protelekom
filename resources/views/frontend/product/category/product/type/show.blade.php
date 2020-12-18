@@ -53,7 +53,7 @@
                             <td>
                                 <form action="{{ route('frontend.basket.store', [$type->id]) }}" method="POST">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    {{--<button type="submit" class="btn btn-outline-primary">do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>--}}
+                                    <button type="submit" class="btn btn-outline-primary">Do koszyka <i class="fas fa-shopping-basket fa-lg"></i></button>
                                 </form>
                             </td>
                         </tr>
