@@ -36,7 +36,7 @@ return [
                 'more' => 45
             ],
         ],
-        'methods_of_payment' => ['prepayment' => 'przedpłata na konto']
+        'methods_of_payment' => ['prepayment' => 'Przedpłata na konto']
     ],
     'ui' => [
         'backend' => [

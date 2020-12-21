@@ -23,9 +23,11 @@
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.question') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.question') }}" title="najczęściej zadawane pytania i odpowiedzi">pytania @if($currentRouteName == 'frontend.pages.question')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    --}}
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.delivery') active @endif">
-                        <a class="nav-link" href="{{ route('frontend.pages.delivery') }}" title="koszty i sposoby dostawy">dostawa @if($currentRouteName == 'frontend.pages.delivery')<span class="sr-only">(current)</span>@endif</a>
+                        <a class="nav-link" href="{{ route('frontend.pages.delivery') }}" title="koszty i sposoby dostawy">Dostawa @if($currentRouteName == 'frontend.pages.delivery')<span class="sr-only">(current)</span>@endif</a>
                     </li>
+                    {{--
                     <li class="nav-item @if($currentRouteName == 'frontend.pages.term_condition') active @endif">
                         <a class="nav-link" href="{{ route('frontend.pages.term_condition') }}" title="regulamin sklepu">regulamin @if($currentRouteName == 'frontend.pages.term_condition')<span class="sr-only">(current)</span>@endif</a>
                     </li>
