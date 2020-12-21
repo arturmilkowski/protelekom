@@ -1,7 +1,7 @@
 # szop
 
-<p align="center"><img src="http://woda.vot.pl/img/szop.jpg" width="500"></p>
+<p align="center"><img src="https://protelekom.pl/storage/img/protelekom.png"></p>
 
 ## prymitywny sklep internetowy
 
-[działający sklep](https://woda-kolonska.pl/)
+[działający sklep](https://protelekom.pl/)
